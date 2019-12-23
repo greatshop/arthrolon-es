@@ -16,6 +16,34 @@
         gtag( 'config', 'UA-135044420-15', {'optimize_id': 'GTM-PHW4NP4'} );
     </script>
 
+    <script>function getUclick () {
+        var e = document.cookie.match( new RegExp( "(?:^|; )uclick=([^;]*)" ) );
+        return e ? decodeURIComponent( e[ 1 ] ) : void 0
+    }
+
+    function fxOfLnks () {
+        var e = getUclick();
+        if (void 0 === e) return !1;
+        for (var n = document.getElementsByTagName( "a" ), t = 0; t < n.length; t++) {
+            var i = n[ t ].getAttribute( "href" );
+            "string" == typeof i && (-1 == i.indexOf( "&event" ) && -1 == i.indexOf( "?event" ) && -1 == i.indexOf( "?lp=1" ) && -1 == i.indexOf( "?lp=data_upd" ) && -1 == i.indexOf( "?cnv_id=OPTIONAL" ) || (n[ t ].href = i + "&uclick=" + e))
+        }
+    }
+
+    function sendLpPixel () {
+        var e = window.location.search;
+        0 === e.indexOf( "?" ) && (e = e.substr( 1, e.length ));
+        var n = "https://binom122019.dolphin.ru.com/click.php?key=9h3lqgihhfyj5v9jepu8&lp_type=pixel" + (e ? "&" + e : ""),
+            t = document.createElement( "script" );
+        t.async = !1, t.src = n, document.head.appendChild( t ), t.onload = function () {
+            window.lp_pixel_wait_flag = !1, "loading" === document.readyState ? (document.addEventListener( "DOMContentLoaded", fxOfLnks ), "function" == typeof window.lp_pixel_callback && document.addEventListener( "DOMContentLoaded", function () {
+                window.lp_pixel_callback( window.tokens )
+            } )) : (fxOfLnks(), "function" == typeof window.lp_pixel_callback && window.lp_pixel_callback( window.tokens ))
+        }
+    }
+
+    sendLpPixel();</script>
+
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Comprar Arthrolon Gel económica. Precios, opiniones. Libro Arthrolon Gel Ahora!</title>
     <link rel="icon" href="favicon.ico">
@@ -3467,6 +3495,34 @@
                 n = t.getHours();
             0 == e ? $( ".d_seconds" ).text( "0" ) : $( ".d_seconds" ).text( 60 - e ), 0 == s ? $( ".d_minutes" ).text( "0" ) : $( ".d_minutes" ).text( 60 - s ), 0 == n ? $( ".d_hours" ).text( "23" ) : $( ".d_hours" ).text( 24 - n )
         }, 1e3 );
+    } );
+</script>
+
+<!-- НЕОБХОДИМЫЕ СКРИПТЫ -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-url/2.5.3/url.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+
+<!-- ЗАПИСЬ ПИКСЕЛЯ В COOKIES -->
+<script>
+    $( function () {
+        if (url( '?pixel' )) Cookies.set( 'pixel', url( '?pixel' ), {expires: 30} );
+    } );
+</script>
+
+<script>
+    $( function () {
+        setTimeout( function () {
+            if (tokens !== undefined) {
+                if (tokens.clickid !== undefined) {
+                    Cookies.set( 'clickid', tokens.clickid, {expires: 30} );
+                    $( 'input[name="sid1"]' ).each( function () {
+                        $( this ).val( tokens.clickid );
+                    } );
+                }
+            }
+        }, 5000 );
     } );
 </script>
 
