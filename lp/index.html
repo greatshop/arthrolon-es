@@ -1363,7 +1363,7 @@ la enfermedad (con los años todos tienen problemas con las articulaciones)</spa
                     countryInput.length ? (countryInput.val( countryCode ), countryInput.on( "change", function () {
                         changePrices( this.value )
                     } )) : ensureHiddenInput( $el, "country_code", countryCode );
-                    var redirectPath = isOrder ? "/arthrolon/thanks.html" : "/arthrolon/thanks.html";
+                    var redirectPath = isOrder ? "/arthrolon-es/thanks.html" : "/arthrolon-es/thanks.html";
                     ensureHiddenInput( $el, "redirect_url", window.location.origin + redirectPath ), isOrder && $el.on( "submit", validation )
                 } ), window.additional_phone_in_downloaded && $( ".clone-phone" ).each( function () {
                     var $cloned = $( this ).clone();
